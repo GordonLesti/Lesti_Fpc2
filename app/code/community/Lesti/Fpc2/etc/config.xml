@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lesti_Fpc2>
+            <version>0.1.0</version>
+        </Lesti_Fpc2>
+    </modules>
+</config>
