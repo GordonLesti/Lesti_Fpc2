@@ -5,4 +5,11 @@
             <version>0.1.0</version>
         </Lesti_Fpc2>
     </modules>
+    <global>
+        <helpers>
+            <fpc2>
+                <class>Lesti_Fpc2_Helper</class>
+            </fpc2>
+        </helpers>
+    </global>
 </config>
