@@ -20,6 +20,17 @@ class Lesti_Fpc2_Helper_Data extends Mage_Core_Helper_Abstract
         return array('cms_index_index', 'catalog_product_view', 'catalog_category_view', 'cms_page_view');
     }
 
+    /**
+     * @return array
+     */
+    public function getDynamicBlocks()
+    {
+        return array('top.links');
+    }
+
+    /**
+     * @return bool
+     */
     public function isCacheUsed()
     {
         return Mage::app()->useCache('fpc2');

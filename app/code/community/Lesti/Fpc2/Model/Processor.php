@@ -28,7 +28,6 @@ class Lesti_Fpc2_Model_Processor
 
     protected function _processRequest(Mage_Core_Controller_Request_Http $request)
     {
-        /** @var Lesti_Fpc2_Helper_Request $requestHelper */
         $requestHelper = new Lesti_Fpc2_Helper_Request();
         $key = $requestHelper->buildKey($request);
         $cache = $this->_getCache();

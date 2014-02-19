@@ -37,6 +37,15 @@
                     </fpc2_http_response_send_before>
                 </observers>
             </http_response_send_before>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <fpc2_core_block_abstract_to_html_after>
+                        <class>fpc2/observer</class>
+                        <type>singleton</type>
+                        <method>coreBlockAbstractToHtmlAfter</method>
+                    </fpc2_core_block_abstract_to_html_after>
+                </observers>
+            </core_block_abstract_to_html_after>
         </events>
     </frontend>
 </config>
