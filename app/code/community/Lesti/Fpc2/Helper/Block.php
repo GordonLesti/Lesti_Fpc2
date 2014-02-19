@@ -13,11 +13,11 @@
 class Lesti_Fpc2_Helper_Block extends Mage_Core_Helper_Abstract
 {
     /**
-     * @param Mage_Core_Block_Abstract $block
+     * @param $nameInLayout
      * @return string
      */
-    public function buildKey(Mage_Core_Block_Abstract $block)
+    public function buildKey($nameInLayout)
     {
-        return '<!--' . md5($block->getNameInLayout()) . '-->';
+        return '<!--' . md5($nameInLayout) . '-->';
     }
 }

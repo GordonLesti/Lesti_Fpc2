@@ -53,7 +53,7 @@ class Lesti_Fpc2_Model_Observer
             if (in_array($nameInLayout, $helper->getDynamicBlocks())) {
                 /** @var Lesti_Fpc2_Helper_Block $blockHelper */
                 $blockHelper = Mage::helper('fpc2/block');
-                $key = $blockHelper->buildKey($block);
+                $key = $blockHelper->buildKey($nameInLayout);
                 $this->_placeholders[] = $key;
                 $this->_html[] = $observer->getTransport()->getHtml();
                 $observer->getTransport()->setHtml($key);
