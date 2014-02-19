@@ -3,7 +3,7 @@
     <global>
         <cache>
             <request_processors>
-                <lt>Lesti_Fpc2_Model_Fpc</lt>
+                <lt>Lesti_Fpc2_Model_Processor</lt>
             </request_processors>
         </cache>
     </global>

@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-class Lesti_Fpc2_Model_Fpc
+class Lesti_Fpc2_Model_Processor
 {
     public function extractContent($content = false)
     {
