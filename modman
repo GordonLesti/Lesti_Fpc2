@@ -1,2 +1,3 @@
 app/etc/modules/Lesti_Fpc2.xml app/etc/modules/Lesti_Fpc2.xml
+app/etc/fpc2_enable.xml app/etc/fpc2_enable.xml
 app/code/community/Lesti/Fpc2 app/code/community/Lesti/Fpc2

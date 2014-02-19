@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <cache>
+            <request_processors>
+                <lt>Lesti_Fpc2_Model_Fpc</lt>
+            </request_processors>
+        </cache>
+    </global>
+</config>
