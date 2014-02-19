@@ -7,7 +7,21 @@
  * To change this template use File | Settings | File Templates.
  */
 
+/**
+ * Class Lesti_Fpc2_Helper_Data
+ */
 class Lesti_Fpc2_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    
+    /**
+     * @return array
+     */
+    public function getCacheAbleActions()
+    {
+        return array('cms_index_index', 'catalog_product_view', 'catalog_category_view', 'cms_page_view');
+    }
+
+    public function isCacheUsed()
+    {
+        return Mage::app()->useCache('fpc2');
+    }
 }

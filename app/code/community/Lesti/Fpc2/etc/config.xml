@@ -6,10 +6,37 @@
         </Lesti_Fpc2>
     </modules>
     <global>
+        <cache>
+            <types>
+                <fpc2 translate="label,description" module="fpc2">
+                    <label><![CDATA[Fpc2]]></label>
+                    <description><![CDATA[Full Page Cache]]></description>
+                    <tags><![CDATA[FPC2]]></tags>
+                </fpc2>
+            </types>
+        </cache>
         <helpers>
             <fpc2>
                 <class>Lesti_Fpc2_Helper</class>
             </fpc2>
         </helpers>
+        <models>
+            <fpc2>
+                <class>Lesti_Fpc2_Model</class>
+            </fpc2>
+        </models>
     </global>
+    <frontend>
+        <events>
+            <http_response_send_before>
+                <observers>
+                    <fpc2_http_response_send_before>
+                        <class>fpc2/observer</class>
+                        <type>singleton</type>
+                        <method>httpResponseSendBefore</method>
+                    </fpc2_http_response_send_before>
+                </observers>
+            </http_response_send_before>
+        </events>
+    </frontend>
 </config>

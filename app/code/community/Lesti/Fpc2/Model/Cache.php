@@ -7,6 +7,9 @@
  * To change this template use File | Settings | File Templates.
  */
 
+/**
+ * Class Lesti_Fpc2_Model_Cache
+ */
 class Lesti_Fpc2_Model_Cache extends Mage_Core_Model_Cache
 {
     /**

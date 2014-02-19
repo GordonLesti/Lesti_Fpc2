@@ -7,10 +7,42 @@
  * To change this template use File | Settings | File Templates.
  */
 
+/*+
+
+*/
 class Lesti_Fpc2_Model_Processor
 {
-    public function extractContent($content = false)
+    /**
+     * @var Lesti_Fpc2_Model_Cache
+     */
+    protected $_cache;
+
+    /**
+     * @param bool $content
+     */
+    public function extractContent($content)
     {
-        // TODO return cached page
+        $request = Mage::app()->getRequest();
+        return $this->_processRequest($request);
+    }
+
+    protected function _processRequest(Mage_Core_Controller_Request_Http $request)
+    {
+        /** @var Lesti_Fpc2_Helper_Request $requestHelper */
+        $requestHelper = new Lesti_Fpc2_Helper_Request();
+        $key = $requestHelper->buildKey($request);
+        $cache = $this->_getCache();
+        $body = $cache->load($key);
+        if ($body) {
+            return $body;
+        }
+    }
+
+    protected function _getCache()
+    {
+        if (is_null($this->_cache)) {
+            $this->_cache = new Lesti_Fpc2_Model_Cache();
+        }
+        return $this->_cache;
     }
 }
