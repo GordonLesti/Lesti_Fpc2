@@ -16,8 +16,13 @@ class Lesti_Fpc2_Helper_Block extends Mage_Core_Helper_Abstract
      * @param $nameInLayout
      * @return string
      */
+    public function getPlaceholder($nameInLayout)
+    {
+        return '<!--' . $this->buildKey($nameInLayout) . '-->';
+    }
+
     public function buildKey($nameInLayout)
     {
-        return '<!--' . md5($nameInLayout) . '-->';
+        return md5($nameInLayout);
     }
 }

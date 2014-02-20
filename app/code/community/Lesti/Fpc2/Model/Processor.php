@@ -18,6 +18,16 @@ class Lesti_Fpc2_Model_Processor
     protected $_cache;
 
     /**
+     * @var array
+     */
+    protected $_html = array();
+
+    /**
+     * @var array
+     */
+    protected $_placeholder = array();
+
+    /**
      * @param bool $content
      */
     public function extractContent($content)
@@ -33,6 +43,16 @@ class Lesti_Fpc2_Model_Processor
         $cache = $this->_getCache();
         $body = $cache->load($key);
         if ($body) {
+            $session = new Lesti_Fpc2_Model_Session();
+            $helper = new Lesti_Fpc2_Helper_Data();
+            $blockHelper = new Lesti_Fpc2_Helper_Block();
+            $dynamicBlocks = $helper->getDynamicBlocks();
+            foreach ($dynamicBlocks as $nameInLayout) {
+                $key = $blockHelper->buildKey($nameInLayout);
+                $this->_html = $session->getBlockHtml($key);
+                $this->_placeholder = $blockHelper->getPlaceholder($nameInLayout);
+            }
+            $body = str_replace($this->_placeholder, $this->_html, $body);
             return $body;
         }
     }
